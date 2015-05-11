@@ -56,5 +56,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
+process.env.PORT = 9000;
+console.log("[Start] listening, port", process.env.PORT);
 
 module.exports = app;
