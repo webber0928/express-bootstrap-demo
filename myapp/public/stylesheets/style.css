@@ -1,21 +1,31 @@
 body {
-  /*padding: 50px;*/
+  padding-top: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
-.header-bg{
-  background: url("http://placekitten.com/g/1024/300");
-  background-size: 100% 50%;
-  background-attachment: fixed;  
-  height: 400px;
-}
+
 .section{
   padding-top: 110px;
   padding-bottom: 110px;
 }
-.thumbnail > i{
-  font-size: 100px;
+
+.profile-top img{
+  position: absolute;
+  margin-left: -100px;
+  left: 50%;
+}
+
+.profile-bottom .col-md-4 .glyphicon{
+  font-size: 60px;
+  padding: 25px;
+  border: 5px solid #fff;
+}
+.profile-bottom .col-md-4:hover .glyphicon{
+  border: 5px solid #000;
+}
+.progress{
+  height: 30px;
 }

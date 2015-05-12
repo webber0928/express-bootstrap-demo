@@ -1,65 +1,69 @@
 extends layout
 
 block content
-  .section
+  #home.section
+    .container
+      .row.text-center
+        h1 
+          | 我是 WEBBER
+          br 
+          | 而我也是一個 前端網頁 的 Developer
+        a.btn.btn-default.btn-lg(href="#profile") 瞭解更多
+  #profile.section.profile-top.bg-info
+    .container
+      .row.text-center
+        h1 我很高興你的拜訪
+        h3 我設計了這個網站，你可以從這裡了解我，所以慢慢享受吧～
+        img.img-circle(src="http://graph.facebook.com/bird23074035/picture?width=180")
+  .section.profile-bottom
+    .container
+      .row.text-center
+        .col-md-4
+          spen.glyphicon.glyphicon-heart.img-circle
+          h3 為什麼我喜歡程式
+          h4.text-muted 我喜歡用程式來消磨我的時間，我很享受結果出來的那一個瞬間。
+        .col-md-4
+          spen.glyphicon.glyphicon-music.img-circle
+          h3 為什麼我愛音樂
+          h4.text-muted 他能讓我更加放鬆，聽著這些音符發出來的聲音能讓我沈澱一些事情。
+        .col-md-4
+          spen.glyphicon.glyphicon-apple.img-circle
+          h3 蘋果是一個好東西
+          h4.text-muted 恩..我指的是” 一天一蘋果，醫生遠離我 “這句話。
+  #skills.section.bg-info
     .container
       .row
-        img.center-block.img-circle(src="http://graph.facebook.com/bird23074035/picture?width=360&height=360" alt="Hi I'm webber!")
-        .info.text-center
-          h1.text-warning 嗨! 這是我的個人網頁
-          p.lead.text-info
-            | 我是 WEBBER! 我是一個網頁的開發者...
-          a.btn.btn-lg.btn-success 聯絡我
-  .section.bg-info
+        h1 我的技能_
+        .col-md-6
+          h3.text-muted 
+            |我的興趣源自於學校 homepage 的課程，讓我覺得原來網路世界是如此的有趣，慢慢琢磨到至今。
+        .col-md-6
+          .progress
+            .progress-bar.progress-bar-success(role="progressbar" style="width: 70%;")
+              | HTML 7/10
+          .progress
+            .progress-bar.progress-bar-success(role="progressbar" style="width: 70%;")
+              | CSS 7/10
+          .progress
+            .progress-bar.progress-bar-success(role="progressbar" style="width: 70%;")
+              | JS 7/10
+  #contact.section
     .container
       .row.text-center
-        h1 我喜歡
-        p 美味的食物、好看的網站、籃球賽事、籃球鞋、牛排、音樂、貓咪、好看的網站、麥當勞、珍珠奶茶...，和許多其他的事情 :)
-  .section
-    .container
-      .row.text-center
-        h1 各種技能
-        .col-md-4.col-sm-6
-          .thumbnail.bg-warning
-            i.glyphicon.glyphicon-tree-conifer.bg-warning.img-circle
-            .caption
-              h3 吃貨
-              p 
-                | 吃遍台北各個美食，但是只限於吃到飽的餐廳！
-        .col-md-4.col-sm-6
-          .thumbnail
-            i.glyphicon.glyphicon-tree-deciduous.bg-warning.img-circle
-            .caption
-              h3 睡覺
-              p 
-                | 因為沒有事情做只好一直睡覺一直睡覺...
-        .col-md-4.col-sm-6
-          .thumbnail
-            i.glyphicon.glyphicon-flag.bg-warning.img-circle
-            .caption
-              h3 打東東
-              p 請問這邊有人叫東東的嗎？
-  .section.bg-info
-    .container
-      .row.text-center
-        h1 聯絡我們
-        from.form-horizontal
-          .col-md-12
+        h1 打招呼
+        h4.text-muted 如果你有任何問題，我會回答你
+        form.form-horizontal(action="/contact" method="post" role="form")
+          .col-md-1
+          .col-md-3
             .form-group
-              label.col-sm-2.control-label(for="inputName") 姓名
-              .col-sm-10
-                input(type="text" class="form-control" id="inputName" placeholder="Name")
+              .col-md-12
+                input.form-control(name="name" type="text" placeholder="Name")
             .form-group
-              label.col-sm-2.control-label(for="inputEmail") Email
-              .col-sm-10
-                input(type="email" class="form-control" id="inputEmail" placeholder="Email")
+              .col-md-12
+                input.form-control(name="email" type="email" placeholder="Email")
+          .col-md-6
             .form-group
-              label.col-sm-2.control-label 留言給我
-              .col-sm-10
-                textarea.form-control(rows="4" placeholder="請您留下給我的訊息")
-          .col-md-12
-            button.btn.btn-success.btn-lg.pull-right(type="submit" class="btn btn-skin pull-right" id="btnContactUs")
-              | 送出
-
-  //- h1= title
-  //- p Welcome to #{title}
+              .col-md-12
+                textarea.form-control(name="messqge" rows="4" placeholder="Message" required)
+          .col-md-10
+            input.btn.btn-success.pull-right(type="submit" value="送出")
